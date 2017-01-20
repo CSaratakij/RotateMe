@@ -14,12 +14,12 @@ var motion = Vector2()
 onready var health = get_node("health")
 onready var force_target = get_node("Force_Target")
 
-func initialize():
+func _initialize():
 	health.set_current(MAXIMUM_HEALTH)
 	health.set_maximum(MAXIMUM_HEALTH)
 
 func _ready():
-	initialize()
+	_initialize()
 	set_process(true)
 	set_process_input(true)
 	set_fixed_process(true)
